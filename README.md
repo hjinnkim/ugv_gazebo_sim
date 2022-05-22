@@ -64,7 +64,7 @@ sudo apt-get install ros-melodic-teleop-twist-keyboard
 
 ## 3.	About Usage
 
-### 1、1.	Create workspace, download simulation model function package and compile
+### 1.	Create workspace, download simulation model function package and compile
 
 ​		Open a new terminal and create a workspace named scout_ws, enter in the terminal:
 
@@ -121,7 +121,7 @@ catkin_make
 
 
 
-### 2、2.	Run the star file of scout_v2 and scout_mini, and visualize the urdf file in Rviz
+### 2.	Run the star file of scout_v2 and scout_mini, and visualize the urdf file in Rviz
 
 ​	Enter the scout_ws folder
 
