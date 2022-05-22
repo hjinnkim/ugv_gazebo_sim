@@ -169,7 +169,6 @@ source devel/setup.bash
 roslaunch scout_gazebo_sim scout_empty_world.launch
 ```
 
-![img](image/scoutv2_gazebo.png) 
 
 #Control by keyboard, the scout2.0 and scout_mini can be controlled to move forward, left, right and backward through "i", "j", "l",and "," on the keyboard
 
@@ -177,7 +176,6 @@ roslaunch scout_gazebo_sim scout_empty_world.launch
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
 ```
 
-![img](image/teleop.png) 
 
 ​	Start the simulation environment of scout_mini
 
@@ -185,17 +183,22 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 roslaunch scout_gazebo_sim scout_mini_playpen.launch
 ```
 
-![img](image/scout_mini_gazebo.png) 
 
 #Control by keyboard, the scout2.0 and scout_mini can be controlled to move forward, left, right and backward through "i", "j", "l",and "," on the keyboard
 
 ```
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
 ```
+---
+## Add LiDAR
+Reference
 
-![img](image/teleop.png) 
+https://www.youtube.com/watch?v=jJzzw2jk-lY
 
+https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#GPULaser
 
+https://level-asphalt-6c6.notion.site/Gazebo-Scout-mini-add-lidar-086c23578e904467864f284ad02c8564
 
+---
  
 
