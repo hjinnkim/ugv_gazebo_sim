@@ -149,7 +149,7 @@ roslaunch scout_description display_scout_mini.launch
 ```
  
 
-### 3、3.	Start the gazebo simulation environment of scout_v2 and scout_mini and control scout_v2 and scout_mini movement in the gazebo
+### 3.	Start the gazebo simulation environment of scout_v2 and scout_mini and control scout_v2 and scout_mini movement in the gazebo
 
 ​	Enter the scout_ws folder
 
