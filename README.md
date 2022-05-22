@@ -199,6 +199,9 @@ https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#GPULaser
 
 https://level-asphalt-6c6.notion.site/Gazebo-Scout-mini-add-lidar-086c23578e904467864f284ad02c8564
 
+hokuyo.dae : https://github.com/osrf/gazebo_models/tree/master/hokuyo/meshes
+
+
 ---
  
 
