@@ -106,7 +106,7 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
         base_link:
           Value: true
         chassis_link:
@@ -121,6 +121,31 @@ Visualization Manager:
           Value: true
         rear_right_wheel_link:
           Value: true
+        camera_bottom_screw_frame:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_left_ir_frame:
+          Value: false
+        camera_left_ir_optical_frame:
+          Value: false
+        camera_link:
+          Value: false
+        camera_right_ir_frame:
+          Value: false
+        camera_right_ir_optical_frame:
+          Value: false
+        hokuyo_link:
+          Value: false
+        imu_link:
+          Value: false
+        
       Marker Scale: 1
       Name: TF
       Show Arrows: true
