@@ -46,10 +46,10 @@ void ScoutSkidSteer::TwistCmdCallback(
   double right_side_velocity =
       (driving_vel + steering_vel * SCOUT_WHEELBASE) / SCOUT_WHEEL_RADIUS;
 
-  motor_cmd[0].data = 2*right_side_velocity;
-  motor_cmd[1].data = -2*left_side_velocity;
-  motor_cmd[2].data = -2*left_side_velocity;
-  motor_cmd[3].data = 2*right_side_velocity;
+  motor_cmd[0].data = right_side_velocity;
+  motor_cmd[1].data = -left_side_velocity;
+  motor_cmd[2].data = -left_side_velocity;
+  motor_cmd[3].data = right_side_velocity;
 
   motor_fr_pub_.publish(motor_cmd[0]);
   motor_fl_pub_.publish(motor_cmd[1]);

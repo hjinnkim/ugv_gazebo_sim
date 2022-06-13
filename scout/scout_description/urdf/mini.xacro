@@ -51,6 +51,14 @@
         </collision>
     </link>
 
+     <link name="base_footprint"/>
+
+     <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0 0 ${wheel_vertical_offset - wheel_radius / 2}" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="base_footprint" />
+    </joint>
+
     <!-- <joint name="chassis_link_joint" type="fixed">
         <origin xyz="0 0 ${wheel_radius - wheel_vertical_offset}" rpy="0 0 0" />
         <parent link="base_link" />
@@ -250,5 +258,4 @@
             <rpyOffsets>0 0 0</rpyOffsets>
         </plugin>
     </gazebo>
-
 </robot>
