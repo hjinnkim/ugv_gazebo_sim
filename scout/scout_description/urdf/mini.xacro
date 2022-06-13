@@ -30,6 +30,17 @@
     <xacro:property name="wheel_length" value="0.8e-01" />
     <xacro:property name="wheel_radius" value="1.600e-01" />
 
+
+    <link name="base_footprint">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </link>
+
+     <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0 0 ${-wheel_vertical_offset + wheel_radius / 2}" rpy="0 0 0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+    </joint>
+
     <!-- Base link -->
     <link name="base_link">
         <visual>
@@ -51,13 +62,7 @@
         </collision>
     </link>
 
-     <link name="base_footprint"/>
-
-     <joint name="base_footprint_joint" type="fixed">
-        <origin xyz="0 0 ${wheel_vertical_offset - wheel_radius / 2}" rpy="0 0 0" />
-        <parent link="base_link" />
-        <child link="base_footprint" />
-    </joint>
+     
 
     <!-- <joint name="chassis_link_joint" type="fixed">
         <origin xyz="0 0 ${wheel_radius - wheel_vertical_offset}" rpy="0 0 0" />
@@ -250,12 +255,13 @@
         <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
             <alwaysOn>true</alwaysOn>
             <updateRate>50.0</updateRate>
-            <bodyName>base_link</bodyName>
-            <topicName>odom</topicName>
+            <bodyName>base_footprint</bodyName>
+            <topicName>gt_odom</topicName>
             <gaussianNoise>0.01</gaussianNoise>
             <frameName>map</frameName>
             <xyzOffsets>0 0 0</xyzOffsets>
             <rpyOffsets>0 0 0</rpyOffsets>
         </plugin>
     </gazebo>
+    
 </robot>
