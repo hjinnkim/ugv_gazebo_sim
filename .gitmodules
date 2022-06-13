@@ -1,3 +1,9 @@
 [submodule "realsense_gazebo_plugin"]
 	path = realsense_gazebo_plugin
 	url = https://github.com/pal-robotics/realsense_gazebo_plugin.git
+[submodule "ugv_sdk"]
+	path = ugv_sdk
+	url = https://github.com/agilexrobotics/ugv_sdk.git
+[submodule "scout_ros"]
+	path = scout_ros
+	url = https://github.com/agilexrobotics/scout_ros.git
