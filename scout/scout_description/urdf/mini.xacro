@@ -198,7 +198,7 @@
     <!-- Refer ugv_gazebo_sim/scout/scout_description/_d435.gazebo.xacro -->
     <!-- Refer ugv_gazebo_sim/scout/scout_description/_d435.urdf.xacro -->
     <xacro:include filename="$(find scout_description)/urdf/_d435.urdf.xacro" />
-    <xacro:sensor_d435 parent="base_link">
+    <xacro:sensor_d435 parent="base_link" name="camera" topics_ns="camera" publish_pointcloud="true" >
         <origin xyz="0.1 0 0.1" rpy="0 0 0"/>
     </xacro:sensor_d435>
 
