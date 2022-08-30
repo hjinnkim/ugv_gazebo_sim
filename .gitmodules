@@ -4,6 +4,7 @@
 [submodule "scout_ros"]
 	path = scout_ros
 	url = https://github.com/hjinnkim/scout_ros.git
+	branch = bts-devel
 [submodule "ugv_sdk"]
 	path = ugv_sdk
 	url = https://github.com/agilexrobotics/ugv_sdk.git
