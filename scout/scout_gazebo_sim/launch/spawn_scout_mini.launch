@@ -15,6 +15,7 @@
     <arg name="debug" default="true" />
 
     <arg name="odom_cmd" default="false" />
+    <arg name="odom_converted" default="true" />
 
     <include file="$(find scout_description)/launch/scout_mini_stock.launch">
         <arg name="robot_namespace" value="$(arg robot_namespace)" />
@@ -47,6 +48,22 @@
             <arg name="pub_tf" value="true"/>
             <arg name="base_frame" value="base_footprint" />
             <arg name="odom_frame" value="odom_cmd" />
+        </include>
+    </group>
+
+    <group if="$(arg odom_converted)" >
+        <include file="$(find scout_odom)/launch/scout_odom.launch" >
+            <arg name="odom_topic_name" value="odom_converted"/>
+            <arg name="odom_groundtruth_topic_name" value="odom_groundtruth"/>
+            <arg name="base_frame" value="base_footprint" />
+            <arg name="odom_frame" value="odom_converted" />
+            <arg name="pub_tf" value="true"/>
+            <arg name="add_noise" value="true"/>
+
+            <arg name="x" value="$(arg x)"/>
+            <arg name="y" value="$(arg y)"/>
+            <arg name="z" value="$(arg z)"/>
+            <arg name="yaw" value="$(arg yaw)"/>
         </include>
     </group>
 

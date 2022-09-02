@@ -31,14 +31,16 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <!-- <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/turtlebot3_world.world"/> -->
 
     <!-- initial robot position -->
-    <arg name="x" default="0.0"/>
-    <arg name="y" default="0.0"/>
+    <arg name="x" default="3.0"/>
+    <arg name="y" default="3.0"/>
     <arg name="z" default="0.0"/>
     <arg name="yaw" default="0.0"/>
 
     <arg name="open_rviz" default="false" />
-    <arg name="odom_cmd" default="false" />
+    <arg name="odom_cmd" default="true" />
+    <arg name="odom_converted" default="true" />
 
+    <!-- gazebo world parameters -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(arg world_name)"/>
         <arg name="paused" value="false"/>
@@ -50,6 +52,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <arg name="verbose" value="true" />
     </include>
 
+    <!-- scout_mini model spawn -->
     <include file="$(find scout_gazebo_sim)/launch/spawn_scout_mini.launch">
         <arg name="x" value = "$(arg x)" />
         <arg name="y" value = "$(arg y)" />
@@ -57,6 +60,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <arg name="yaw" value = "$(arg yaw)" />
 
         <arg name="odom_cmd" value="$(arg odom_cmd)" />
+        <arg name="odom_converted" value="$(arg odom_converted)" />
     </include>
         
     <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find scout_description)/rviz/model_display.rviz" /> -->
