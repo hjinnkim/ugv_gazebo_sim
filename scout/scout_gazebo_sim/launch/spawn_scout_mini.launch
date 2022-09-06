@@ -52,7 +52,7 @@
     </group>
 
     <group if="$(arg odom_converted)" >
-        <include file="$(find scout_odom)/launch/scout_odom.launch" >
+        <include file="$(find scout_odom)/launch/scout_odom_converted.launch" >
             <arg name="odom_topic_name" value="odom_converted"/>
             <arg name="odom_groundtruth_topic_name" value="odom_groundtruth"/>
             <arg name="base_frame" value="base_footprint" />

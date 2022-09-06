@@ -62,15 +62,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 <mesh
                   filename="package://scout_description/meshes/wheel.dae" />
               </geometry>
-              <surface>
-                <friction>
-                  <ode>
-                    <mu>1.0</mu>
-                    <mu2>1.0</mu2>
-                  </ode>
-                </friction>
-              </surface>
             </collision>
+            <mu1 value="200"/>
+            <mu2 value="200"/>
+            <kp value="10000000.0"/>
+            <kd value="1.0"/>
+            <minDepth>0.01</minDepth>
         </link>
 
         <joint name="${wheel_prefix}_wheel" type="continuous">

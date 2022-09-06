@@ -31,13 +31,15 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <!-- <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/turtlebot3_world.world"/> -->
 
     <!-- initial robot position -->
-    <arg name="x" default="3.0"/>
-    <arg name="y" default="3.0"/>
+    <arg name="x" default="5.0"/>
+    <arg name="y" default="5.0"/>
     <arg name="z" default="0.0"/>
-    <arg name="yaw" default="0.0"/>
+
+    <!-- Never change this. When initial pose for amcl is set, it malfunctions -->
+    <arg name="yaw" default="0.0"/> 
 
     <arg name="open_rviz" default="false" />
-    <arg name="odom_cmd" default="true" />
+    <arg name="odom_cmd" default="false" />
     <arg name="odom_converted" default="true" />
 
     <!-- gazebo world parameters -->
