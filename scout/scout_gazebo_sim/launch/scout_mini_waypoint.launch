@@ -26,16 +26,16 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 <launch>
 
     <arg name="robot_namespace" default="/"/>
-    <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/clearpath_playpen.world"/>
+    <arg name="world_name" default="$(find scout_gazebo_sim)/../..//gazebo_models_worlds_collection/worlds/waypoint.world"/>
     <!-- <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/turtlebot3_house.world"/> -->
     <!-- <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/turtlebot3_world.world"/> -->
 
     <!-- initial robot position -->
-    <arg name="x" default="5.0"/>
-    <arg name="y" default="5.0"/>
+    <arg name="x" default="0.0"/>
+    <arg name="y" default="0.0"/>
     <arg name="z" default="0.0"/>
 
-    <!-- Never change this parameter. When initial pose for amcl is set, it malfunctions -->
+    <!-- Never change this. When initial pose for amcl is set, it malfunctions -->
     <arg name="yaw" default="0.0"/> 
 
     <arg name="open_rviz" default="false" />
