@@ -39,8 +39,10 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <arg name="yaw" default="0.0"/> 
 
     <arg name="open_rviz" default="false" />
-    <arg name="odom_cmd" default="false" />
+    <arg name="odom_cmd" default="true" />
+    <arg name="cmd_pub_tf" default="true" />
     <arg name="odom_converted" default="true" />
+    <arg name="converted_pub_tf" default="false" />
 
     <!-- gazebo world parameters -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -62,7 +64,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <arg name="yaw" value = "$(arg yaw)" />
 
         <arg name="odom_cmd" value="$(arg odom_cmd)" />
+        <arg name="cmd_pub_tf" value="$(arg cmd_pub_tf)" />
         <arg name="odom_converted" value="$(arg odom_converted)" />
+        <arg name="converted_pub_tf" value="$(arg converted_pub_tf)" />
     </include>
         
     <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find scout_description)/rviz/model_display.rviz" /> -->
