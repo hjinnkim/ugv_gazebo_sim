@@ -46,7 +46,7 @@
         <visual>
             <origin
                     xyz="0 0 0.0"
-                    rpy="1.57 0 1.57" />
+                    rpy="1.57 0 -1.57" />
             <geometry>
                 <mesh filename="package://scout_description/meshes/scout_mini_base_link2.dae" />
             </geometry>
@@ -54,10 +54,9 @@
         <collision>
             <origin
                     xyz="0 0 0"
-                    rpy="1.57 0 1.57" />
+                    rpy="1.57 0 -1.57" />
           <geometry>
-            <mesh
-              filename="package://scout_description/meshes/scout_mini_base_link2.dae" />
+            <mesh filename="package://scout_description/meshes/scout_mini_base_link2.dae" />
           </geometry>
         </collision>
     </link>
@@ -263,7 +262,7 @@
             <updateRate>50.0</updateRate>
             <bodyName>base_footprint</bodyName>
             <topicName>odom_groundtruth</topicName>
-            <gaussianNoise>0.01</gaussianNoise>
+            <gaussianNoise>0.0</gaussianNoise>
             <frameName>world</frameName>
             <xyzOffsets>0 0 0</xyzOffsets>
             <rpyOffsets>0 0 0</rpyOffsets>

@@ -26,7 +26,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 <launch>
 
     <arg name="robot_namespace" default="/"/>
-    <arg name="world_name" default="$(find scout_gazebo_sim)/../..//gazebo_models_worlds_collection/worlds/waypoint.world"/>
+    <arg name="world_name" default="$(find scout_gazebo_sim)/../../gazebo_models_worlds_collection/worlds/waypoint.world"/>
     <!-- <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/turtlebot3_house.world"/> -->
     <!-- <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/turtlebot3_world.world"/> -->
 
@@ -35,12 +35,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <arg name="y" default="0.0"/>
     <arg name="z" default="0.0"/>
 
-    <!-- Never change this. When initial pose for amcl is set, it malfunctions -->
+    <!-- Never change yaw. When initial pose for amcl is set, it malfunctions -->
     <arg name="yaw" default="0.0"/> 
 
     <arg name="open_rviz" default="false" />
     <arg name="odom_cmd" default="true" />
-    <arg name="cmd_pub_tf" default="true" />
+    <arg name="cmd_pub_tf" default="false" />
     <arg name="odom_converted" default="true" />
     <arg name="converted_pub_tf" default="false" />
 

@@ -5,9 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Status1
-        - /RobotModel1
-        - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 678
@@ -193,6 +190,8 @@ Visualization Manager:
           Value: true
         inertial_link:
           Value: true
+        odom:
+          Value: false
         rear_left_wheel_link:
           Value: true
         rear_right_wheel_link:
@@ -204,36 +203,37 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_footprint:
-          base_link:
-            camera_bottom_screw_frame:
-              camera_link:
-                camera_depth_frame:
-                  camera_color_frame:
-                    camera_color_optical_frame:
+        odom:
+          base_footprint:
+            base_link:
+              camera_bottom_screw_frame:
+                camera_link:
+                  camera_depth_frame:
+                    camera_color_frame:
+                      camera_color_optical_frame:
+                        {}
+                    camera_depth_optical_frame:
                       {}
-                  camera_depth_optical_frame:
-                    {}
-                  camera_left_ir_frame:
-                    camera_left_ir_optical_frame:
-                      {}
-                  camera_right_ir_frame:
-                    camera_right_ir_optical_frame:
-                      {}
-            front_left_wheel_link:
-              {}
-            front_right_wheel_link:
-              {}
-            hokuyo_link:
-              {}
-            imu_link:
-              {}
-            inertial_link:
-              {}
-            rear_left_wheel_link:
-              {}
-            rear_right_wheel_link:
-              {}
+                    camera_left_ir_frame:
+                      camera_left_ir_optical_frame:
+                        {}
+                    camera_right_ir_frame:
+                      camera_right_ir_optical_frame:
+                        {}
+              front_left_wheel_link:
+                {}
+              front_right_wheel_link:
+                {}
+              hokuyo_link:
+                {}
+              imu_link:
+                {}
+              inertial_link:
+                {}
+              rear_left_wheel_link:
+                {}
+              rear_right_wheel_link:
+                {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -264,7 +264,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.9432930946350098
+      Distance: 7.89532470703125
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -272,17 +272,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.027046792209148407
-        Y: -0.03490818291902542
-        Z: -0.09952529519796371
+        X: -0.678950846195221
+        Y: -3.5334744453430176
+        Z: -0.5005902051925659
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.43979591131210327
+      Pitch: 0.38479700684547424
       Target Frame: <Fixed Frame>
-      Yaw: 2.0904242992401123
+      Yaw: 4.040435314178467
     Saved: ~
 Window Geometry:
   Displays:

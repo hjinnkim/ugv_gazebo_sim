@@ -31,7 +31,7 @@ class ScoutSkidSteer {
   std::string cmd_topic_;
 
   const double SCOUT_WHEELBASE = 0.498;
-  const double SCOUT_WHEEL_RADIUS = 0.16459 / 2;
+  const double SCOUT_WHEEL_RADIUS = 0.16459 * .5;
 
   ros::NodeHandle *nh_;
 
