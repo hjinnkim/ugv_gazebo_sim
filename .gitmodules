@@ -1,6 +1,9 @@
-[submodule "realsense_gazebo_plugin"]
-	path = realsense_gazebo_plugin
-	url = https://github.com/pal-robotics/realsense_gazebo_plugin.git
 [submodule "gazebo_models_worlds_collection"]
 	path = gazebo_models_worlds_collection
 	url = https://github.com/chaolmu/gazebo_models_worlds_collection
+[submodule "sensor_plugin/realsense_gazebo_plugin"]
+	path = sensor_plugin/realsense_gazebo_plugin
+	url = https://github.com/pal-robotics/realsense_gazebo_plugin.git
+[submodule "sensor_plugin/velodyne_simulator"]
+	path = sensor_plugin/velodyne_simulator
+	url = https://github.com/lmark1/velodyne_simulator.git
