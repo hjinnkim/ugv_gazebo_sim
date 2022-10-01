@@ -28,7 +28,10 @@
     <xacro:property name="wheel_vertical_offset" value="-0.160000047342231" />-->
 
     <xacro:property name="wheel_length" value="0.8e-01" />
-    <xacro:property name="wheel_radius" value="1.600e-01" />
+    <!-- <xacro:property name="wheel_radius" value="1.600e-01" /> -->
+
+    <!-- SCOUT mini wheel radius is 0.8e-01 -->
+    <xacro:property name="wheel_radius" value="0.8e-01" />
 
     <!-- Base link -->
     <link name="base_link">
