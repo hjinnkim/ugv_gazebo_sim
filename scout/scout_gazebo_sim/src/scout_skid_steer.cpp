@@ -41,6 +41,7 @@ void ScoutSkidSteer::TwistCmdCallback(
   double driving_vel = msg->linear.x;
   double steering_vel = msg->angular.z;
 
+  // SKID STEER DRIVE equation
   double left_side_velocity =
       (driving_vel - steering_vel * SCOUT_WHEELBASE / 2.0 ) / SCOUT_WHEEL_RADIUS;
   double right_side_velocity =
