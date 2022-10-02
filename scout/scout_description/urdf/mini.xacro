@@ -8,9 +8,11 @@
     <xacro:arg name="2d_lidar" default="true" />
     <xacro:arg name="3d_lidar" default="false" />
     <xacro:arg name="camera" default="true" />
-    <xacro:arg name="visualize" default="true" />
+    <xacro:arg name="imu" default="true" />
+    <xacro:arg name="gps" default="false" />
+    <xacro:arg name="visualize" default="false" />
     
-    <!-- GPU setting -->
+    <!-- GPU setting for Lidar processing -->
     <xacro:arg name="gpu" default="true" />
     <xacro:property name="gpu" value="$(arg gpu)" />
 
@@ -32,18 +34,22 @@
 
     <!-- Camera : rgb, openni-kinect, realsense-d435 -->
     <!-- <xacro:arg name="camera_name" default="rgb" /> -->
-    <xacro:arg name="camera_name" default="openni-kinect" />
-    <!-- <xacro:arg name="camera_name" default="realsense-d435" /> -->
+    <!-- <xacro:arg name="camera_name" default="openni-kinect" /> -->
+    <xacro:arg name="camera_name" default="realsense-d435" />
 
     <!-- Realsense Camera parameters -->
     <xacro:arg name="camera_pointcloud" default="true" />
     
 
     <!-- IMU parameters -->
-    <xacro:arg name="imu" default="true" />
     <xacro:arg name="imu_topic" default="/imu" />
     <xacro:arg name="imu_pose" default="0 0 0.07" />
     <xacro:arg name="imu_orientation" default="0 0 0" />
+
+    <!-- GPS parameters -->
+    <xacro:arg name="gps_topic" default="/gps" />
+    <xacro:arg name="gps_pose" default="-0.2 0 0.07" />
+    <xacro:arg name="gps_orientation" default="0 0 0" />
 
 
     <!-- SCOUT mini wheel 3D file -->
@@ -68,6 +74,16 @@
 
     <!-- SCOUT mini wheel radius is 0.8e-01 -->
     <xacro:property name="wheel_radius" value="0.8e-01" />
+
+    <link name="base_footprint">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </link>
+
+     <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0 0 ${-wheel_vertical_offset + wheel_radius}" rpy="0 0 0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+    </joint>
 
     <!-- Base link -->
     <link name="base_link">
@@ -156,7 +172,7 @@
             <bodyName>base_link</bodyName>
             <topicName>odom_gazebo</topicName>
             <gaussianNoise>0.0</gaussianNoise>
-            <frameName>world</frameName>
+            <frameName>map</frameName>
             <xyzOffsets>0 0 0</xyzOffsets>
             <rpyOffsets>0 0 0</rpyOffsets>
         </plugin>
@@ -196,6 +212,14 @@
         <xacro:IMU parent_link="base_link" topicName="$(arg imu_topic)">
             <origin xyz="$(arg imu_pose)" rpy="$(arg imu_orientation)" />
         </xacro:IMU>  
+    </xacro:if>
+
+    <!-- GPS -->
+    <xacro:if value="$(arg gps)" >
+        <xacro:include filename="$(find scout_description)/urdf/gps.xacro" />
+        <xacro:GPS parent_link="base_link" topicName="$(arg gps_topic)">
+            <origin xyz="$(arg gps_pose)" rpy="$(arg gps_orientation)" />
+        </xacro:GPS>  
     </xacro:if>
 
 </robot>
