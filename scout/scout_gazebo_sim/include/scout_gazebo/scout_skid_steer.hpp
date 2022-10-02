@@ -30,7 +30,8 @@ class ScoutSkidSteer {
   std::string motor_rr_topic_;
   std::string cmd_topic_;
 
-  const double SCOUT_WHEELBASE = 0.498;
+  // Distance between left and right wheel
+  const double SCOUT_WHEELBASE = 0.4165;
   // SCOUT_MINI_WHEEL_RADIUS = 0.8e-1
   const double SCOUT_WHEEL_RADIUS = 0.16459 / 2. ;
 
