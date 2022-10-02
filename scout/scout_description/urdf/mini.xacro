@@ -32,8 +32,8 @@
 
     <!-- Camera : rgb, openni-kinect, realsense-d435 -->
     <!-- <xacro:arg name="camera_name" default="rgb" /> -->
-    <!-- <xacro:arg name="camera_name" default="openni-kinect" /> -->
-    <xacro:arg name="camera_name" default="realsense-d435" />
+    <xacro:arg name="camera_name" default="openni-kinect" />
+    <!-- <xacro:arg name="camera_name" default="realsense-d435" /> -->
 
     <!-- Realsense Camera parameters -->
     <xacro:arg name="camera_pointcloud" default="true" />
