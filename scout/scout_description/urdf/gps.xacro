@@ -5,7 +5,10 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="scout_camera">
 
-    <xacro:macro name="GPS" params="parent_link topicName *joint_pose">
+    <xacro:macro name="GPS" params="parent_link *joint_pose">
+
+        <xacro:property name="topicName"    default="/gps" />
+
         <joint name="gps_joint" type="fixed">
             <axis xyz="0 1 0" />
             <parent link="${parent_link}"/>

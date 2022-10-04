@@ -4,7 +4,10 @@
 <!-- https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#GPULaser -->
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="scout_imu">
-    <xacro:macro name="IMU" params="parent_link topicName *joint_pose">
+    <xacro:macro name="IMU" params="parent_link *joint_pose">
+
+        <xacro:property name="topicName"    default="/imu" />
+
         <link name="imu_link">
             <inertial>
                 <mass value="0.001"/>
