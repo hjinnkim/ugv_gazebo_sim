@@ -32,7 +32,7 @@
     <!-- <xacro:arg name="velodyne_lidar_name" default="HDL-32E" />  -->
 
     <!-- Camera Common parameters -->
-    <xacro:arg name="camera_x"       default="0.13" />
+    <xacro:arg name="camera_x"       default="0.2" />
     <xacro:arg name="camera_y"       default="0"    />
     <xacro:arg name="camera_z"       default="0.1"  />
     <xacro:arg name="camera_roll"    default="0"    />

@@ -30,7 +30,7 @@
     <arg name="3d_lidar_name"       default="VLP-16" doc="3D Lidar type : [ VLP-16, HDL-32E ]" />
 
     <!-- Camera pose relative to base_link -->
-    <arg name="camera_x"            default="0.13"  />
+    <arg name="camera_x"            default="0.2"  />
     <arg name="camera_y"            default="0"     />
     <arg name="camera_z"            default="0.1"   />
     <arg name="camera_roll"         default="0"     />

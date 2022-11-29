@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   roslaunch
   sensor_msgs
+  visualization_msgs
   std_msgs
   tf2
   tf2_ros

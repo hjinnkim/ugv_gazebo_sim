@@ -78,7 +78,7 @@ void ScoutROSMessenger::PublishOdometryToROS(double linear, double angular, doub
     double d_y = linear_speed_ * std::sin(theta_) * dt;
     double d_theta = angular_speed_ * dt;
 
-    position_x_ += d_x;
+    position_x_ += d_x+0.01;
     position_y_ += d_y;
     theta_ += d_theta;
 
