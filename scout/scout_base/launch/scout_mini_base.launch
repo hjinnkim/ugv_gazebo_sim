@@ -4,7 +4,7 @@
     <arg name="odom_topic_name" default="odom" />
     <arg name="pub_tf" default="false" />
 
-    <node name="scout_odom_node" pkg="scout_odom" type="scout_odom_node" output="screen" required="true">
+    <node name="scout_base_node" pkg="scout_base" type="scout_base_node" output="screen" required="true">
         <param name="odom_frame" type="string" value="$(arg odom_frame)" />
         <param name="base_frame" type="string" value="$(arg base_frame)" />
         <param name="odom_topic_name" type="string" value="$(arg odom_topic_name)" />

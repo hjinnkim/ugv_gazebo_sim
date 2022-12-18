@@ -38,8 +38,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </include>
 
     <include file="$(find scout_gazebo_sim)/launch/spawn_scout_mini.launch">
-      <arg name="x" value="-1.0"/>
-      <arg name="y" value="-1.0"/>
+      <arg name="x" value="0.0"/>
+      <arg name="y" value="0.0"/>
     </include>
         
     <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find scout_description)/rviz/navigation.rviz" /> -->
